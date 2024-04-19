@@ -13,6 +13,10 @@ app.use(cors());
 
 app.use(express.json());
 
+app.use(cors({
+    origin: 'https://todo-frontend-gamma-three.vercel.app/'
+  }));
+
 
 app.get("/", (req, res) => {
     res.send("THE SERVER IS WORKING");
