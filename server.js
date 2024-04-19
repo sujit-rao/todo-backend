@@ -18,13 +18,18 @@ app.use(cors({
   }));
 
 
-app.get("/", (req, res) => {
-    res.send("THE SERVER IS WORKING");
-})
 
-mongoose.connect(process.env.URI)
+
+const URI = process.env.URI;
+
+try {
+  mongoose.connect(URI)
 .then(() => console.log("Connected to MongoDB"))
-.catch((err) => console.log(err))
+} catch (error) {
+  console.log(error + "mongo db connection error");
+}
+
+
 
 app.use("/api", routes);
 
