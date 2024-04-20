@@ -15,9 +15,9 @@ app.use(cors());
 
 app.use(express.json());
 
-app.use(cors({
-    origin: 'https://todo-frontend-gamma-three.vercel.app'
-  }));
+// app.use(cors({
+//     origin: 'https://todo-frontend-gamma-three.vercel.app'
+//   }));
 
 
 // app.use("/",(req,res)=> {
