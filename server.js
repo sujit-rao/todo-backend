@@ -19,9 +19,10 @@ app.use(cors({
     origin: 'https://todo-frontend-gamma-three.vercel.app'
   }));
 
-app.use("/",(req,res)=> {
-  res.send("WElcome to the server")
-})
+
+// app.use("/",(req,res)=> {
+//   res.send("WElcome to the server")
+// })
 
 const URI = process.env.URI;
 
